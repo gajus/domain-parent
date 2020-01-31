@@ -19,58 +19,7 @@ Adds a parent Node.js [domain](https://nodejs.org/api/domain.html) reference (`p
 <a name="domain-parent-motivation"></a>
 ## Motivation
 
-Domains provide a way to add context to a chain of asynchronous calls. Having a reference to the `parentDomain` allows to collect context from all parent domains, e.g.
-
-```js
-const findParentDomainNames = () => {
-  const parentDomainNames = [];
-
-  let currentDomain = process.domain;
-
-  while (currentDomain && currentDomain.parentDomain) {
-    currentDomain = currentDomain.parentDomain;
-
-    parentDomainNames.push(currentDomain.name);
-  }
-
-  return parentDomainNames;
-};
-
-const main = () => {
-  const d0 = domain.create();
-
-  d0.name = 'd0';
-
-  d0.run(() => {
-    const d1 = domain.create();
-
-    d1.name = 'd1';
-
-    d1.run(() => {
-      const d2 = domain.create();
-
-      d2.name = 'd2';
-
-      d2.run(() => {
-        console.log(findParentDomainNames());
-      });
-    });
-  });
-};
-
-main();
-
-```
-
-The above prints:
-
-```js
-[
-  'd1',
-  'd0'
-]
-
-```
+Domains provide a way to add context to a chain of asynchronous calls. Having a reference to the `parentDomain` allows to collect context from all parent domains.
 
 <a name="domain-parent-implementation"></a>
 ## Implementation
