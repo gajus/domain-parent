@@ -1,9 +1,11 @@
 // @flow
 
+/* eslint-disable fp/no-delete */
+
+import domain from 'domain';
 import test, {
   beforeEach,
 } from 'ava';
-import domain from 'domain'
 import shim from '../../src/shim';
 
 const originalCreate = domain.create;
