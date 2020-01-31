@@ -1,5 +1,5 @@
 <a name="domain-parent"></a>
-# domain-parent 🦾
+# domain-parent 👪
 
 [![Travis build status](http://img.shields.io/travis/gajus/http-terminator/master.svg?style=flat-square)](https://travis-ci.org/gajus/http-terminator)
 [![Coveralls](https://img.shields.io/coveralls/gajus/http-terminator.svg?style=flat-square)](https://coveralls.io/github/gajus/http-terminator)
@@ -9,7 +9,7 @@
 
 Adds a parent Node.js [domain](https://nodejs.org/api/domain.html) reference (`parentDomain` property) to all domains.
 
-* [domain-parent 🦾](#domain-parent)
+* [domain-parent 👪](#domain-parent)
     * [Motivation](#domain-parent-motivation)
     * [Implementation](#domain-parent-implementation)
     * [Usage](#domain-parent-usage)
