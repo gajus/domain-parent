@@ -21,6 +21,8 @@ Adds a parent Node.js [domain](https://nodejs.org/api/domain.html) reference (`p
 
 Domains provide a way to add context to a chain of asynchronous calls. Having a reference to the `parentDomain` allows to collect context from all parent domains.
 
+[Roarr](https://github.com/gajus/roarr#roarr-api-adopt) logger demonstrates how `parentDomain` can be used to create comprehensive logs.
+
 <a name="domain-parent-implementation"></a>
 ## Implementation
 

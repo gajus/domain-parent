@@ -14,6 +14,8 @@ Adds a parent Node.js [domain](https://nodejs.org/api/domain.html) reference (`p
 
 Domains provide a way to add context to a chain of asynchronous calls. Having a reference to the `parentDomain` allows to collect context from all parent domains.
 
+[Roarr](https://github.com/gajus/roarr#roarr-api-adopt) logger demonstrates how `parentDomain` can be used to create comprehensive logs.
+
 ## Implementation
 
 `domain-parent` monkey-patches Node.js [`domain`](https://nodejs.org/api/domain.html) `create` method. All domains that are created after Node.js has been shimmed will have `parentDomain` property. Top-level domain will have `parentDomain` set to `NULL`.
